@@ -1,0 +1,18 @@
+runtime: nodejs
+vm: true
+threadsafe: true
+
+#resources:
+#  cpu: 3
+#  memory_gb: 4
+
+manual_scaling:
+  instances: 1 # We only need one instance
+
+env_variables:
+ GOOGLE_APPLICATION_CREDENTIALS: "credentials.json" # For gcloud
+
+network:
+  forwarded_ports:
+  - 443:8080 # Forward the right port to the machine
+  instance_tag: cloudspeechstreaming

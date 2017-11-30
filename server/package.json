@@ -1,0 +1,25 @@
+{
+  "name": "cloud-speech-api-streaming-example",
+  "description": "Cloud Speech API streaming example for Node.js using gRPC",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "Google Inc.",
+  "engines": {
+    "node": "~4.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "monitor": "nodemon app.js",
+    "deploy": "gcloud app deploy"
+  },
+  "dependencies": {
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "google-auto-auth": "^0.2.4",
+    "google-proto-files": "^0.3.0",
+    "grpc": "^0.15.0",
+    "request": "^2.72.0",
+    "socket.io": "^1.4.8"
+  }
+}

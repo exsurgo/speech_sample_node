@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cloud Speech API streaming example</title>
+  <style>
+    body { font: 14px Roboto, san-serif; }
+    #inputs div {
+      display: inline-block;
+      background-color: #f0f0f0;
+      border-radius: 2px;
+      margin: 20px 10px 0 0;
+      padding: 0 10px 20px 20px;
+      width: 300px;
+    }
+    #response {
+      margin-top: 20px;
+      width: 630px;
+      border-radius: 2px;
+      padding: 20px;
+      background: #BBDEFB;
+      color: #fff;
+      font-size: 18px;
+    }
+      #response.final {
+        min-height: 300px;
+        background: #1976D2;
+      }
+      #response span {
+        display: block;
+        margin: 10px 0;
+      }
+        #response span.incomplete {
+          color: #ccc;
+        }
+  </style>
+</head>
+<body>
+  <h1>Cloud Speech API streaming example</h1>
+
+  <div id="inputs">
+    <div>
+      <h2>Microphone input</h2>
+      <button id="microphoneButton" disabled>Loading&hellip;</button>
+    </div>
+
+    <div>
+      <h2>File input</h2>
+      <input type="file" id="audioFile" disabled>
+    </div>
+  </div>
+
+  <div id="response" class="final">
+    <span class="final"></span>
+    <span class="incomplete"></span>
+  </div>
+
+  <!-- Replace your this with your server location -->
+  <script src="https://cloudspeechstreaming-dot-zoo-tech-external.appspot.com/socket.io/socket.io.js"></script>
+
+  <script src="cloud-speech-api-client.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
